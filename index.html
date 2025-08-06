@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discobeak - Funky Disco Vibes & Retro Style</title>
+    <meta name="description" content="Welcome to Discobeak - where disco culture meets modern creativity. Discover funky apparel, groovy accessories, and retro-inspired goods that bring the dance floor to life.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        disco: {
+                            pink: '#FF1493',
+                            purple: '#8A2BE2',
+                            gold: '#FFD700',
+                            orange: '#FF4500',
+                            cyan: '#00FFFF',
+                            lime: '#32CD32'
+                        }
+                    },
+                    fontFamily: {
+                        disco: ['Orbitron', 'monospace'],
+                        funky: ['Quicksand', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-funky">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-disco-purple">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="disco-duck-icon text-3xl">🦆</div>
+                    <h1 class="text-2xl font-disco font-bold bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                        DISCOBEAK
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="hover:text-disco-gold transition-colors font-semibold">Home</a>
+                    <a href="/about/" class="hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop/" class="hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog/" class="hover:text-disco-gold transition-colors">Blog</a>
+                    <a href="/cart/" class="hover:text-disco-gold transition-colors">
+                        <i class="fas fa-shopping-cart mr-1"></i>Cart
+                        <span class="cart-counter bg-disco-pink text-xs rounded-full px-2 py-1 ml-1" style="display: none;">0</span>
+                    </a>
+                </div>
+                <button class="md:hidden text-disco-gold">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden disco-bg">
+            <div class="absolute inset-0 bg-gradient-to-br from-disco-purple/20 via-disco-pink/20 to-disco-orange/20"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="dancing-duck mb-8">
+                    <div class="text-8xl mb-4 animate-bounce">🦆</div>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-disco font-black mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-disco-pink via-disco-gold to-disco-cyan bg-clip-text text-transparent">
+                        GET YOUR
+                    </span>
+                    <br>
+                    <span class="bg-gradient-to-r from-disco-lime via-disco-orange to-disco-purple bg-clip-text text-transparent">
+                        GROOVE ON
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
+                    Where retro disco culture meets modern creativity. Funk up your style with our groovy collection of apparel, accessories, and good vibes only.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="/shop/" class="disco-button bg-gradient-to-r from-disco-pink to-disco-orange hover:from-disco-orange hover:to-disco-pink px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-bag mr-2"></i>
+                        Shop the Groove
+                    </a>
+                    <a href="/blog/" class="disco-button-outline border-2 border-disco-gold text-disco-gold hover:bg-disco-gold hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-music mr-2"></i>
+                        Read the Beat
+                    </a>
+                </div>
+            </div>
+            <div class="disco-balls absolute inset-0 pointer-events-none">
+                <div class="disco-ball disco-ball-1"></div>
+                <div class="disco-ball disco-ball-2"></div>
+                <div class="disco-ball disco-ball-3"></div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-disco font-bold text-center mb-16">
+                    <span class="bg-gradient-to-r from-disco-cyan to-disco-lime bg-clip-text text-transparent">
+                        Featured Grooves
+                    </span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product 1 -->
+                    <div class="product-card bg-gray-700 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-disco-pink to-disco-purple flex items-center justify-center">
+                            <i class="fas fa-tshirt text-6xl text-white/80"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-disco-gold">Disco Duck Hoodie</h3>
+                            <p class="text-gray-300 mb-4">Cozy up in retro style</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-disco-pink">$69.99</span>
+                                <a href="/shop/disco-duck-hoodie" class="bg-disco-purple hover:bg-disco-pink px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card bg-gray-700 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-disco-gold to-disco-orange flex items-center justify-center">
+                            <i class="fas fa-glasses text-6xl text-white/80"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-disco-gold">Groovy Sunglasses</h3>
+                            <p class="text-gray-300 mb-4">See the world in funk</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-disco-pink">$39.99</span>
+                                <a href="/shop/groovy-sunglasses" class="bg-disco-purple hover:bg-disco-pink px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card bg-gray-700 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-disco-lime to-disco-cyan flex items-center justify-center">
+                            <i class="fas fa-compact-disc text-6xl text-white/80"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-disco-gold">Funk Vinyl Stickers</h3>
+                            <p class="text-gray-300 mb-4">Stick the beat everywhere</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-disco-pink">$12.99</span>
+                                <a href="/shop/funk-vinyl-stickers" class="bg-disco-purple hover:bg-disco-pink px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card bg-gray-700 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-disco-purple to-disco-pink flex items-center justify-center">
+                            <i class="fas fa-gem text-6xl text-white/80"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-disco-gold">Disco Ball Necklace</h3>
+                            <p class="text-gray-300 mb-4">Shine like a star</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-disco-pink">$29.99</span>
+                                <a href="/shop/disco-ball-necklace" class="bg-disco-purple hover:bg-disco-pink px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="/shop" class="disco-button-outline border-2 border-disco-cyan text-disco-cyan hover:bg-disco-cyan hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-arrow-right mr-2"></i>
+                        Shop All Products
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-disco font-bold text-center mb-16">
+                    <span class="bg-gradient-to-r from-disco-orange to-disco-pink bg-clip-text text-transparent">
+                        Latest Beats
+                    </span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Blog 1 -->
+                    <article class="bg-gray-800 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-disco-gold to-disco-orange flex items-center justify-center">
+                            <i class="fas fa-feather-alt text-6xl text-white/80"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-disco-gold">How Disco Ducks Took Over the Dance Floor</h3>
+                            <p class="text-gray-300 mb-4">Discover the funky history behind our feathered disco icons and their rise to dance floor fame...</p>
+                            <a href="/blog/disco-ducks-dance-floor" class="text-disco-cyan hover:text-disco-gold transition-colors font-semibold">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog 2 -->
+                    <article class="bg-gray-800 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-disco-purple to-disco-pink flex items-center justify-center">
+                            <i class="fas fa-palette text-6xl text-white/80"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-disco-gold">Top 5 Retro Styles Making a Comeback</h3>
+                            <p class="text-gray-300 mb-4">From platform shoes to psychedelic patterns, see what retro trends are grooving back into fashion...</p>
+                            <a href="/blog/retro-styles-comeback" class="text-disco-cyan hover:text-disco-gold transition-colors font-semibold">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="/blog" class="disco-button-outline border-2 border-disco-lime text-disco-lime hover:bg-disco-lime hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-newspaper mr-2"></i>
+                        Read All Articles
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 mb-6">
+                    <div class="text-4xl">🦆</div>
+                    <h3 class="text-3xl font-disco font-bold bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                        DISCOBEAK
+                    </h3>
+                </div>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Keep grooving with the funkiest disco vibes. Follow us for the latest drops, groovy stories, and retro inspiration.
+                </p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-8 mb-8">
+                    <a href="/about" class="text-gray-400 hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop" class="text-gray-400 hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog" class="text-gray-400 hover:text-disco-gold transition-colors">Blog</a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2025 Discobeak. All rights reserved. Keep it groovy! ✨
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

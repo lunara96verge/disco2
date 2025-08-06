@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Discobeak | Your Funky Selections</title>
+    <meta name="description" content="Review your disco-inspired selections and proceed to checkout. Complete your Discobeak shopping experience with secure payment options.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        disco: {
+                            pink: '#FF1493',
+                            purple: '#8A2BE2',
+                            gold: '#FFD700',
+                            orange: '#FF4500',
+                            cyan: '#00FFFF',
+                            lime: '#32CD32'
+                        }
+                    },
+                    fontFamily: {
+                        disco: ['Orbitron', 'monospace'],
+                        funky: ['Quicksand', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-funky">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-disco-purple">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="disco-duck-icon text-3xl">🦆</div>
+                    <h1 class="text-2xl font-disco font-bold">
+                        <a href="/" class="bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                            DISCOBEAK
+                        </a>
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="hover:text-disco-gold transition-colors">Home</a>
+                    <a href="/about/" class="hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop/" class="hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog/" class="hover:text-disco-gold transition-colors">Blog</a>
+                    <a href="/cart/" class="text-disco-gold font-semibold">Cart</a>
+                </div>
+                <button class="md:hidden text-disco-gold">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <!-- Breadcrumb -->
+        <section class="py-6 bg-gray-800 border-b border-gray-700">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center space-x-2 text-sm">
+                    <a href="/" class="text-gray-400 hover:text-disco-gold transition-colors">Home</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <a href="/shop/" class="text-gray-400 hover:text-disco-gold transition-colors">Shop</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <span class="text-disco-gold">Shopping Cart</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Content -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-6xl font-disco font-black mb-6">
+                        <span class="bg-gradient-to-r from-disco-pink to-disco-cyan bg-clip-text text-transparent">
+                            Your Groovy Cart
+                        </span>
+                    </h1>
+                    <p class="text-xl text-gray-300">Review your disco-inspired selections</p>
+                </div>
+
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Cart Items -->
+                        <div class="lg:col-span-2">
+                            <div id="cart-items" class="space-y-6">
+                                <!-- Empty cart message -->
+                                <div id="empty-cart" class="text-center py-12 bg-gray-800 rounded-2xl">
+                                    <div class="text-6xl mb-4">🛒</div>
+                                    <h3 class="text-2xl font-bold text-gray-300 mb-4">Your cart is empty</h3>
+                                    <p class="text-gray-400 mb-6">Start adding some funky items to get the party started!</p>
+                                    <a href="/shop/" class="disco-button bg-disco-purple hover:bg-disco-pink px-8 py-3 rounded-full font-semibold transition-colors">
+                                        <i class="fas fa-shopping-bag mr-2"></i>Start Shopping
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="lg:col-span-1">
+                            <div class="bg-gray-800 rounded-2xl p-6 sticky top-32">
+                                <h3 class="text-2xl font-bold mb-6 text-disco-gold">Order Summary</h3>
+                                
+                                <div class="space-y-4 mb-6">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-300">Subtotal</span>
+                                        <span id="subtotal" class="font-semibold">$0.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-300">Shipping</span>
+                                        <span class="font-semibold text-disco-lime">FREE</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-300">Tax</span>
+                                        <span id="tax" class="font-semibold">$0.00</span>
+                                    </div>
+                                    <hr class="border-gray-600">
+                                    <div class="flex justify-between text-xl">
+                                        <span class="font-bold">Total</span>
+                                        <span id="total" class="font-bold text-disco-pink">$0.00</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3" id="checkout-buttons" style="display: none;">
+                                    <button id="paypal-checkout" class="w-full bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition-colors">
+                                        <i class="fab fa-paypal mr-2"></i>PayPal Checkout
+                                    </button>
+                                    <button id="bank-transfer-checkout" class="w-full bg-gray-600 hover:bg-gray-500 px-6 py-3 rounded-full font-semibold transition-colors">
+                                        <i class="fas fa-university mr-2"></i>Bank Transfer
+                                    </button>
+                                    <a href="/checkout/" class="block w-full bg-disco-purple hover:bg-disco-pink px-6 py-3 rounded-full font-semibold transition-colors text-center">
+                                        <i class="fas fa-credit-card mr-2"></i>Proceed to Checkout
+                                    </a>
+                                </div>
+
+                                <!-- Promo Code -->
+                                <div class="mt-6 pt-6 border-t border-gray-600">
+                                    <h4 class="font-semibold mb-3">Promo Code</h4>
+                                    <div class="flex">
+                                        <input type="text" placeholder="Enter code" class="flex-1 bg-gray-700 border border-gray-600 rounded-l-lg px-4 py-2 text-white focus:outline-none focus:border-disco-cyan">
+                                        <button class="bg-disco-cyan hover:bg-disco-lime text-gray-900 px-4 py-2 rounded-r-lg font-semibold transition-colors">
+                                            Apply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="text-2xl">🦆</div>
+                        <h3 class="text-xl font-disco font-bold text-disco-gold">DISCOBEAK</h3>
+                    </div>
+                    <p class="text-gray-400">Bringing back the groove, one funky piece at a time.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-disco-cyan">Shop</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/shop/" class="hover:text-disco-gold transition-colors">All Products</a></li>
+                        <li><a href="/shop/disco-duck-hoodie/" class="hover:text-disco-gold transition-colors">Apparel</a></li>
+                        <li><a href="/shop/groovy-sunglasses/" class="hover:text-disco-gold transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-disco-cyan">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about/" class="hover:text-disco-gold transition-colors">About Us</a></li>
+                        <li><a href="/blog/" class="hover:text-disco-gold transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-disco-cyan">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/cart/" class="hover:text-disco-gold transition-colors">Shopping Cart</a></li>
+                        <li><a href="/checkout/" class="hover:text-disco-gold transition-colors">Checkout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Discobeak. All rights reserved. Keep the funk alive! 🕺</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>

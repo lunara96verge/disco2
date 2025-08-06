@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Discobeak | Complete Your Groovy Purchase</title>
+    <meta name="description" content="Complete your Discobeak purchase with secure checkout options including PayPal and bank transfer. Fast, secure, and funky!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        disco: {
+                            pink: '#FF1493',
+                            purple: '#8A2BE2',
+                            gold: '#FFD700',
+                            orange: '#FF4500',
+                            cyan: '#00FFFF',
+                            lime: '#32CD32'
+                        }
+                    },
+                    fontFamily: {
+                        disco: ['Orbitron', 'monospace'],
+                        funky: ['Quicksand', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-funky">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-disco-purple">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="disco-duck-icon text-3xl">🦆</div>
+                    <h1 class="text-2xl font-disco font-bold">
+                        <a href="/" class="bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                            DISCOBEAK
+                        </a>
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="hover:text-disco-gold transition-colors">Home</a>
+                    <a href="/about/" class="hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop/" class="hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog/" class="hover:text-disco-gold transition-colors">Blog</a>
+                    <a href="/cart/" class="hover:text-disco-gold transition-colors">Cart</a>
+                </div>
+                <button class="md:hidden text-disco-gold">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <!-- Breadcrumb -->
+        <section class="py-6 bg-gray-800 border-b border-gray-700">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center space-x-2 text-sm">
+                    <a href="/" class="text-gray-400 hover:text-disco-gold transition-colors">Home</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <a href="/shop/" class="text-gray-400 hover:text-disco-gold transition-colors">Shop</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <a href="/cart/" class="text-gray-400 hover:text-disco-gold transition-colors">Cart</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <span class="text-disco-gold">Checkout</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Content -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-6xl font-disco font-black mb-6">
+                        <span class="bg-gradient-to-r from-disco-cyan to-disco-lime bg-clip-text text-transparent">
+                            Secure Checkout
+                        </span>
+                    </h1>
+                    <p class="text-xl text-gray-300">Complete your groovy purchase</p>
+                </div>
+
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Checkout Form -->
+                        <div class="space-y-8">
+                            <!-- Customer Information -->
+                            <div class="bg-gray-800 rounded-2xl p-8">
+                                <h2 class="text-2xl font-bold mb-6 text-disco-gold">
+                                    <i class="fas fa-user mr-3"></i>Contact Information
+                                </h2>
+                                <form id="checkout-form" class="space-y-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-300 mb-2">First Name</label>
+                                            <input type="text" name="firstName" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-300 mb-2">Last Name</label>
+                                            <input type="text" name="lastName" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-300 mb-2">Email Address</label>
+                                        <input type="email" name="email" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-300 mb-2">Phone Number</label>
+                                        <input type="tel" name="phone" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Shipping Information -->
+                            <div class="bg-gray-800 rounded-2xl p-8">
+                                <h2 class="text-2xl font-bold mb-6 text-disco-gold">
+                                    <i class="fas fa-shipping-fast mr-3"></i>Shipping Address
+                                </h2>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-300 mb-2">Street Address</label>
+                                        <input type="text" name="address" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-300 mb-2">City</label>
+                                            <input type="text" name="city" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-300 mb-2">State/Province</label>
+                                            <input type="text" name="state" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-gray-300 mb-2">ZIP/Postal Code</label>
+                                            <input type="text" name="zipCode" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-300 mb-2">Country</label>
+                                        <select name="country" required class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-disco-cyan">
+                                            <option value="">Select Country</option>
+                                            <option value="US">United States</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="UK">United Kingdom</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="FR">France</option>
+                                            <option value="JP">Japan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method Selection -->
+                            <div class="bg-gray-800 rounded-2xl p-8">
+                                <h2 class="text-2xl font-bold mb-6 text-disco-gold">
+                                    <i class="fas fa-credit-card mr-3"></i>Payment Method
+                                </h2>
+                                <div class="space-y-4">
+                                    <div class="border border-gray-600 rounded-lg p-4 hover:border-disco-cyan transition-colors cursor-pointer payment-option" data-method="paypal">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <input type="radio" name="paymentMethod" value="paypal" class="text-disco-cyan">
+                                                <div>
+                                                    <h3 class="font-semibold">PayPal</h3>
+                                                    <p class="text-sm text-gray-400">Pay securely with your PayPal account</p>
+                                                </div>
+                                            </div>
+                                            <i class="fab fa-paypal text-2xl text-blue-500"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="border border-gray-600 rounded-lg p-4 hover:border-disco-cyan transition-colors cursor-pointer payment-option" data-method="bank">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <input type="radio" name="paymentMethod" value="bank">
+                                                <div>
+                                                    <h3 class="font-semibold">Bank Transfer</h3>
+                                                    <p class="text-sm text-gray-400">Direct bank transfer with instructions</p>
+                                                </div>
+                                            </div>
+                                            <i class="fas fa-university text-2xl text-disco-cyan"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="lg:col-span-1">
+                            <div class="bg-gray-800 rounded-2xl p-8 sticky top-32">
+                                <h2 class="text-2xl font-bold mb-6 text-disco-gold">Order Summary</h2>
+                                
+                                <!-- Order Items -->
+                                <div id="order-items" class="space-y-4 mb-6">
+                                    <!-- Items will be populated by JavaScript -->
+                                </div>
+
+                                <!-- Order Totals -->
+                                <div class="space-y-4 mb-6 pt-6 border-t border-gray-600">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-300">Subtotal</span>
+                                        <span id="checkout-subtotal" class="font-semibold">$0.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-300">Shipping</span>
+                                        <span class="font-semibold text-disco-lime">FREE</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-300">Tax</span>
+                                        <span id="checkout-tax" class="font-semibold">$0.00</span>
+                                    </div>
+                                    <hr class="border-gray-600">
+                                    <div class="flex justify-between text-xl">
+                                        <span class="font-bold">Total</span>
+                                        <span id="checkout-total" class="font-bold text-disco-pink">$0.00</span>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Buttons -->
+                                <div class="space-y-4">
+                                    <!-- PayPal Button -->
+                                    <div id="paypal-button-container" class="hidden">
+                                        <button id="paypal-payment-button" class="w-full bg-blue-600 hover:bg-blue-700 px-6 py-4 rounded-lg font-semibold transition-colors text-lg">
+                                            <i class="fab fa-paypal mr-2"></i>Pay with PayPal
+                                        </button>
+                                    </div>
+
+                                    <!-- Bank Transfer Button -->
+                                    <div id="bank-transfer-container" class="hidden">
+                                        <button id="bank-transfer-button" class="w-full bg-gray-600 hover:bg-gray-500 px-6 py-4 rounded-lg font-semibold transition-colors text-lg">
+                                            <i class="fas fa-university mr-2"></i>Proceed with Bank Transfer
+                                        </button>
+                                    </div>
+
+                                    <!-- Default Complete Order Button -->
+                                    <button id="complete-order-button" class="w-full bg-disco-purple hover:bg-disco-pink px-6 py-4 rounded-lg font-semibold transition-colors text-lg">
+                                        <i class="fas fa-check mr-2"></i>Complete Order
+                                    </button>
+                                </div>
+
+                                <!-- Security Info -->
+                                <div class="mt-6 pt-6 border-t border-gray-600 text-center">
+                                    <div class="flex items-center justify-center space-x-4 text-sm text-gray-400">
+                                        <div class="flex items-center space-x-1">
+                                            <i class="fas fa-lock text-disco-cyan"></i>
+                                            <span>Secure SSL</span>
+                                        </div>
+                                        <div class="flex items-center space-x-1">
+                                            <i class="fas fa-shield-alt text-disco-lime"></i>
+                                            <span>Protected</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bank Transfer Modal -->
+        <div id="bank-transfer-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+            <div class="bg-gray-800 rounded-2xl p-8 max-w-md w-full">
+                <h3 class="text-2xl font-bold mb-6 text-disco-gold">Bank Transfer Details</h3>
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <span class="text-gray-400">Account Name:</span>
+                        <span class="font-semibold ml-2">Discobeak Ltd</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Account Number:</span>
+                        <span class="font-semibold ml-2">12345678</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Routing Number:</span>
+                        <span class="font-semibold ml-2">987654321</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Bank:</span>
+                        <span class="font-semibold ml-2">Disco Bank</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Reference:</span>
+                        <span class="font-semibold ml-2" id="bank-reference">DB-123456</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Amount:</span>
+                        <span class="font-semibold ml-2 text-disco-pink" id="bank-amount">$0.00</span>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400 mb-6">Please include the reference number in your transfer. We'll process your order once payment is received (usually 1-2 business days).</p>
+                <div class="flex space-x-4">
+                    <button id="close-bank-modal" class="flex-1 bg-gray-600 hover:bg-gray-500 px-4 py-2 rounded-lg transition-colors">
+                        Close
+                    </button>
+                    <button id="confirm-bank-transfer" class="flex-1 bg-disco-purple hover:bg-disco-pink px-4 py-2 rounded-lg transition-colors">
+                        I'll Transfer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="text-2xl">🦆</div>
+                        <h3 class="text-xl font-disco font-bold text-disco-gold">DISCOBEAK</h3>
+                    </div>
+                    <p class="text-gray-400">Bringing back the groove, one funky piece at a time.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-disco-cyan">Shop</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/shop/" class="hover:text-disco-gold transition-colors">All Products</a></li>
+                        <li><a href="/shop/disco-duck-hoodie/" class="hover:text-disco-gold transition-colors">Apparel</a></li>
+                        <li><a href="/shop/groovy-sunglasses/" class="hover:text-disco-gold transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-disco-cyan">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about/" class="hover:text-disco-gold transition-colors">About Us</a></li>
+                        <li><a href="/blog/" class="hover:text-disco-gold transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-disco-cyan">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/cart/" class="hover:text-disco-gold transition-colors">Shopping Cart</a></li>
+                        <li><a href="/checkout/" class="hover:text-disco-gold transition-colors">Checkout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Discobeak. All rights reserved. Keep the funk alive! 🕺</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/checkout.js"></script>
+</body>
+</html>

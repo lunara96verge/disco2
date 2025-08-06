@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Discobeak | Our Funky Story</title>
+    <meta name="description" content="Learn about Discobeak's mission to bring disco culture and retro vibes to modern life. Discover our story, values, and why we're passionate about keeping the funk alive.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        disco: {
+                            pink: '#FF1493',
+                            purple: '#8A2BE2',
+                            gold: '#FFD700',
+                            orange: '#FF4500',
+                            cyan: '#00FFFF',
+                            lime: '#32CD32'
+                        }
+                    },
+                    fontFamily: {
+                        disco: ['Orbitron', 'monospace'],
+                        funky: ['Quicksand', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-funky">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-disco-purple">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="disco-duck-icon text-3xl">🦆</div>
+                    <h1 class="text-2xl font-disco font-bold">
+                        <a href="/" class="bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                            DISCOBEAK
+                        </a>
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="hover:text-disco-gold transition-colors">Home</a>
+                    <a href="/about" class="text-disco-gold font-semibold">About</a>
+                    <a href="/shop" class="hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog" class="hover:text-disco-gold transition-colors">Blog</a>
+                </div>
+                <button class="md:hidden text-disco-gold">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="py-20 bg-gradient-to-br from-disco-purple/20 via-disco-pink/20 to-disco-orange/20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="text-6xl mb-6">🕺🦆💃</div>
+                <h1 class="text-5xl md:text-7xl font-disco font-black mb-6">
+                    <span class="bg-gradient-to-r from-disco-cyan to-disco-lime bg-clip-text text-transparent">
+                        Our Groovy Story
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Where disco culture meets modern creativity, and every duck gets to dance.
+                </p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-disco font-bold mb-6 text-disco-gold">
+                                What is Discobeak?
+                            </h2>
+                            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                                Picture this: It's 1975, the disco ball is spinning, John Travolta is striking poses, and somewhere in a funky corner of the dance floor, a little disco duck is getting down to the beat. That duck? That's our spirit animal.
+                            </p>
+                            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                                Discobeak was born from a simple belief that the world needs more funk, more color, and definitely more dancing ducks. We're not just a brand – we're a movement that celebrates the groovy spirit of disco culture while embracing the creativity of modern design.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gradient-to-br from-disco-pink to-disco-purple rounded-2xl p-12 inline-block">
+                                <i class="fas fa-music text-8xl text-white/80"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                        <div class="text-center order-2 lg:order-1">
+                            <div class="bg-gradient-to-br from-disco-gold to-disco-orange rounded-2xl p-12 inline-block">
+                                <i class="fas fa-heart text-8xl text-white/80"></i>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h2 class="text-3xl md:text-4xl font-disco font-bold mb-6 text-disco-gold">
+                                Our Mission
+                            </h2>
+                            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                                We're on a mission to bring back the joy, the color, and the unapologetic self-expression that made the disco era legendary. Whether it's through our funky apparel, groovy accessories, or inspiring content, we want to help you find your inner dancing duck.
+                            </p>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                Every piece we create is designed to make you feel confident, creative, and ready to boogie through life with style and attitude.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-disco font-bold text-center mb-16">
+                    <span class="bg-gradient-to-r from-disco-pink to-disco-cyan bg-clip-text text-transparent">
+                        What We Stand For
+                    </span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Value 1 -->
+                    <div class="text-center bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="text-5xl mb-6">✨</div>
+                        <h3 class="text-2xl font-bold mb-4 text-disco-gold">Authentic Funk</h3>
+                        <p class="text-gray-300">
+                            We believe in genuine self-expression and celebrating what makes you unique. No fake vibes, just real funk.
+                        </p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="text-center bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="text-5xl mb-6">🌈</div>
+                        <h3 class="text-2xl font-bold mb-4 text-disco-gold">Colorful Creativity</h3>
+                        <p class="text-gray-300">
+                            Life's too short for boring colors. We embrace bold, vibrant designs that spark joy and inspire creativity.
+                        </p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="text-center bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="text-5xl mb-6">🕺</div>
+                        <h3 class="text-2xl font-bold mb-4 text-disco-gold">Dance Floor Energy</h3>
+                        <p class="text-gray-300">
+                            We bring the energy and confidence of the dance floor to everyday life. Every day is a chance to groove.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personality Section -->
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-disco font-bold mb-8">
+                        <span class="bg-gradient-to-r from-disco-orange to-disco-lime bg-clip-text text-transparent">
+                            The Discobeak Personality
+                        </span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+                        We're playful but not childish, retro but not outdated, bold but not overwhelming. Think of us as your coolest friend who always knows the best dance moves, has impeccable style, and isn't afraid to stand out in a crowd.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                        <div class="bg-disco-pink/20 rounded-xl p-6">
+                            <div class="text-3xl mb-2">🎵</div>
+                            <p class="font-semibold text-disco-pink">Rhythmic</p>
+                        </div>
+                        <div class="bg-disco-gold/20 rounded-xl p-6">
+                            <div class="text-3xl mb-2">🌟</div>
+                            <p class="font-semibold text-disco-gold">Radiant</p>
+                        </div>
+                        <div class="bg-disco-cyan/20 rounded-xl p-6">
+                            <div class="text-3xl mb-2">🎨</div>
+                            <p class="font-semibold text-disco-cyan">Creative</p>
+                        </div>
+                        <div class="bg-disco-lime/20 rounded-xl p-6">
+                            <div class="text-3xl mb-2">💫</div>
+                            <p class="font-semibold text-disco-lime">Electric</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-disco-purple/20 to-disco-pink/20 rounded-2xl p-8">
+                        <p class="text-lg text-gray-300 italic">
+                            "Life's a dance floor, and we're here to make sure you've got the right moves, the perfect outfit, and the confidence to boogie like nobody's watching."
+                        </p>
+                        <p class="text-disco-gold font-semibold mt-4">
+                            - The Discobeak Team 🦆✨
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-disco font-bold mb-6">
+                    <span class="bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                        Ready to Join the Groove?
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Explore our funky collection and discover your inner dancing duck. The dance floor is waiting!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/shop" class="disco-button bg-gradient-to-r from-disco-pink to-disco-orange hover:from-disco-orange hover:to-disco-pink px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-bag mr-2"></i>
+                        Shop Now
+                    </a>
+                    <a href="/blog" class="disco-button-outline border-2 border-disco-cyan text-disco-cyan hover:bg-disco-cyan hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-book-open mr-2"></i>
+                        Read Our Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 mb-6">
+                    <div class="text-4xl">🦆</div>
+                    <h3 class="text-3xl font-disco font-bold bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                        DISCOBEAK
+                    </h3>
+                </div>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Keep grooving with the funkiest disco vibes. Follow us for the latest drops, groovy stories, and retro inspiration.
+                </p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-8 mb-8">
+                    <a href="/about" class="text-gray-400 hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop" class="text-gray-400 hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog" class="text-gray-400 hover:text-disco-gold transition-colors">Blog</a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2025 Discobeak. All rights reserved. Keep it groovy! ✨
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

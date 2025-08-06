@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy Sunglasses - Discobeak | Funk-Tinted Style</title>
+    <meta name="description" content="See the world through funk-tinted lenses with our Groovy Sunglasses. Premium quality meets retro disco style in these must-have shades from Discobeak.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        disco: {
+                            pink: '#FF1493',
+                            purple: '#8A2BE2',
+                            gold: '#FFD700',
+                            orange: '#FF4500',
+                            cyan: '#00FFFF',
+                            lime: '#32CD32'
+                        }
+                    },
+                    fontFamily: {
+                        disco: ['Orbitron', 'monospace'],
+                        funky: ['Quicksand', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-funky">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-disco-purple">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="disco-duck-icon text-3xl">🦆</div>
+                    <h1 class="text-2xl font-disco font-bold">
+                        <a href="/" class="bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                            DISCOBEAK
+                        </a>
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="hover:text-disco-gold transition-colors">Home</a>
+                    <a href="/about" class="hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop" class="text-disco-gold font-semibold">Shop</a>
+                    <a href="/blog" class="hover:text-disco-gold transition-colors">Blog</a>
+                </div>
+                <button class="md:hidden text-disco-gold">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <!-- Breadcrumb -->
+        <section class="py-6 bg-gray-800 border-b border-gray-700">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center space-x-2 text-sm">
+                    <a href="/" class="text-gray-400 hover:text-disco-gold transition-colors">Home</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <a href="/shop" class="text-gray-400 hover:text-disco-gold transition-colors">Shop</a>
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                    <span class="text-disco-gold">Groovy Sunglasses</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details -->
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Product Image -->
+                    <div>
+                        <div class="bg-gradient-to-br from-disco-gold to-disco-orange rounded-2xl p-16 h-96 flex items-center justify-center mb-6">
+                            <i class="fas fa-glasses text-9xl text-white/80"></i>
+                        </div>
+                        <div class="grid grid-cols-4 gap-4">
+                            <div class="bg-gradient-to-br from-disco-gold to-disco-orange rounded-lg p-4 h-20 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                                <i class="fas fa-glasses text-2xl text-white/80"></i>
+                            </div>
+                            <div class="bg-gradient-to-br from-disco-orange to-disco-gold rounded-lg p-4 h-20 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                                <i class="fas fa-glasses text-2xl text-white/80"></i>
+                            </div>
+                            <div class="bg-gradient-to-br from-disco-gold/60 to-disco-orange/60 rounded-lg p-4 h-20 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                                <i class="fas fa-glasses text-2xl text-white/80"></i>
+                            </div>
+                            <div class="bg-gradient-to-br from-disco-orange/60 to-disco-gold/60 rounded-lg p-4 h-20 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                                <i class="fas fa-glasses text-2xl text-white/80"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-disco-orange px-3 py-1 rounded-full text-sm font-semibold">New Arrival</span>
+                            <span class="bg-disco-cyan/20 text-disco-cyan px-3 py-1 rounded-full text-sm font-semibold">UV Protection</span>
+                        </div>
+                        
+                        <h1 class="text-4xl md:text-5xl font-disco font-bold mb-4">
+                            <span class="bg-gradient-to-r from-disco-gold to-disco-orange bg-clip-text text-transparent">
+                                Groovy Sunglasses
+                            </span>
+                        </h1>
+
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="flex text-disco-gold text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-400">(94 reviews)</span>
+                        </div>
+
+                        <div class="text-4xl font-bold text-disco-pink mb-6">$39.99</div>
+
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            Step into the sunshine with style! Our Groovy Sunglasses feature premium polarized lenses with 100% UV protection, wrapped in a retro-inspired frame that screams disco sophistication. Whether you're hitting the beach or strutting down the street, these shades will keep you looking cool while protecting your eyes.
+                        </p>
+
+                        <!-- Frame Style Selection -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3">Frame Style</h3>
+                            <div class="flex space-x-3">
+                                <button class="px-4 py-2 border border-disco-orange text-disco-orange rounded-lg">Classic</button>
+                                <button class="px-4 py-2 border border-gray-600 rounded-lg hover:border-disco-orange hover:text-disco-orange transition-colors">Aviator</button>
+                                <button class="px-4 py-2 border border-gray-600 rounded-lg hover:border-disco-orange hover:text-disco-orange transition-colors">Round</button>
+                            </div>
+                        </div>
+
+                        <!-- Lens Color Selection -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold mb-3">Lens Color</h3>
+                            <div class="flex space-x-3">
+                                <button class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-disco-gold"></button>
+                                <button class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-red-500 border-2 border-gray-600 hover:border-disco-orange transition-colors"></button>
+                                <button class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-gray-600 hover:border-disco-cyan transition-colors"></button>
+                                <button class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-gray-600 hover:border-disco-pink transition-colors"></button>
+                            </div>
+                        </div>
+
+                        <!-- Quantity and Add to Cart -->
+                        <div class="flex space-x-4 mb-8">
+                            <div class="flex items-center border border-gray-600 rounded-lg">
+                                <button class="px-4 py-3 hover:text-disco-orange transition-colors">-</button>
+                                <span class="px-4 py-3 border-x border-gray-600">1</span>
+                                <button class="px-4 py-3 hover:text-disco-orange transition-colors">+</button>
+                            </div>
+                            <button class="flex-1 bg-gradient-to-r from-disco-gold to-disco-orange hover:from-disco-orange hover:to-disco-gold px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="bg-gray-700 rounded-xl p-6 mb-8">
+                            <h3 class="text-lg font-semibold mb-4 text-disco-gold">Product Features</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-center"><i class="fas fa-check text-disco-lime mr-2"></i> 100% UV400 protection</li>
+                                <li class="flex items-center"><i class="fas fa-check text-disco-lime mr-2"></i> Polarized lenses reduce glare</li>
+                                <li class="flex items-center"><i class="fas fa-check text-disco-lime mr-2"></i> Lightweight titanium frame</li>
+                                <li class="flex items-center"><i class="fas fa-check text-disco-lime mr-2"></i> Scratch-resistant coating</li>
+                                <li class="flex items-center"><i class="fas fa-check text-disco-lime mr-2"></i> Comfortable nose pads</li>
+                                <li class="flex items-center"><i class="fas fa-check text-disco-lime mr-2"></i> Includes protective case</li>
+                            </ul>
+                        </div>
+
+                        <!-- Shipping Info -->
+                        <div class="bg-gray-700 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4 text-disco-gold">Shipping & Returns</h3>
+                            <div class="space-y-3 text-gray-300">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shipping-fast text-disco-cyan mr-3"></i>
+                                    <span>Free shipping on orders over $50</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-undo text-disco-cyan mr-3"></i>
+                                    <span>30-day hassle-free returns</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-shield-alt text-disco-cyan mr-3"></i>
+                                    <span>1-year quality guarantee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Shop -->
+        <section class="py-12 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <a href="/shop" class="disco-button-outline border-2 border-disco-cyan text-disco-cyan hover:bg-disco-cyan hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Shop
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 mb-6">
+                    <div class="text-4xl">🦆</div>
+                    <h3 class="text-3xl font-disco font-bold bg-gradient-to-r from-disco-pink to-disco-gold bg-clip-text text-transparent">
+                        DISCOBEAK
+                    </h3>
+                </div>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Keep grooving with the funkiest disco vibes. Follow us for the latest drops, groovy stories, and retro inspiration.
+                </p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-disco-pink hover:text-disco-gold text-2xl transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-8 mb-8">
+                    <a href="/about" class="text-gray-400 hover:text-disco-gold transition-colors">About</a>
+                    <a href="/shop" class="text-gray-400 hover:text-disco-gold transition-colors">Shop</a>
+                    <a href="/blog" class="text-gray-400 hover:text-disco-gold transition-colors">Blog</a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2025 Discobeak. All rights reserved. Keep it groovy! ✨
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

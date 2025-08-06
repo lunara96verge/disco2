@@ -1,0 +1,74 @@
+Create a **fully static website** for the domain **discobeak.com**. There is no existing code or content — you are building everything from scratch.
+
+---
+
+### Brand Concept:
+"Discobeak" is a **funky, vibrant, fun brand** — imagine a fusion of retro disco culture and playful modern creativity. The site should reflect an energetic, colorful, slightly nostalgic personality with clean design.
+
+---
+
+### Technical Requirements:
+- Use **HTML5**, **Tailwind CSS**, and optionally **vanilla JavaScript**.
+- Must be a **fully static website** — no backend, no database, no CMS, no frameworks (no React, no WordPress).
+- Organize content in **modern clean folder structure** (e.g. `/about/index.html`, not `/about.html`)
+- All links must **hide `.html` extensions** (use directory-based routing).
+
+---
+
+### Pages and Structure:
+
+1. **Homepage** (`/`)
+   - Brand intro with bold visual identity
+   - Hero section (funky colors, maybe animated disco duck mascot)
+   - Preview of shop products
+   - Blog teaser section
+   - Call-to-action buttons to visit `/shop` and `/blog`
+
+2. **About Page** (`/about`)
+   - Story of the brand: What is Discobeak? (fun, humorous tone)
+   - Mission, style, personality of the brand
+
+3. **Shop Page** (`/shop`)
+   - Display **8 creative products** (ex: disco-themed apparel, quirky accessories, stickers, music-themed merch)
+   - Each product should include:
+     - Name
+     - Price
+     - Description
+     - Image placeholder
+     - “Add to Cart” button (visual only, non-functional)
+     - Link to individual product page (`/shop/product-name`)
+
+4. **Individual Product Pages** (`/shop/[product-name]`)
+   - Larger image
+   - Full description
+   - Price + mock purchase button
+   - Back to Shop link
+
+5. **Blog Page** (`/blog`)
+   - List of **4 articles** with fun and relevant titles, such as:
+     - “How Disco Ducks Took Over the Dance Floor”
+     - “Top 5 Retro Styles Making a Comeback”
+     - “The Funk Behind Discobeak”
+     - “What Your Favorite Vinyl Says About You”
+   - Each post links to full article
+
+6. **Individual Blog Pages** (`/blog/[post-title]`)
+   - Full article content with SEO structure
+   - Fun tone, engaging storytelling
+   - Images (placeholder), headings, links
+
+---
+
+### SEO + Responsiveness:
+- Use semantic HTML5 structure: `<header>`, `<main>`, `<section>`, `<footer>`
+- Add proper meta tags:
+  - `<title>`
+  - `<meta name="description">`
+  - `alt` text on all images
+- Mobile-first, responsive Tailwind layout
+- Clear headings (H1, H2...), accessible structure
+- Fast loading, clean code
+
+---
+
+### Folder Structure:
